@@ -54,8 +54,6 @@ function checkWinner(max_points, max_sets) {
   const red_sets_count = document.querySelector("#red-sets-count");
   const blue_sets_count = document.querySelector("#blue-sets-count");
 
-  console.log(red_btn.innerHTML, blue_btn.innerHTML);
-
   if (parseInt(red_btn.innerHTML) >= max_points && parseInt(red_btn.innerHTML) - parseInt(blue_btn.innerHTML) >= 2) {
     red_sets_count.innerHTML = parseInt(red_sets_count.innerHTML) + 1;
     red_btn.innerHTML = 0;
