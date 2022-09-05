@@ -1,0 +1,133 @@
+$dark1: #1f1f1f;
+
+$red: #e51212;
+$dark-red: #8f1c1c;
+$blue: #1227e5;
+$dark-blue: #1c518f;
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: $dark1;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#game-container {
+  // display: none;
+}
+
+#swap-button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  transition: ease-in-out 0.15s;
+
+  &:hover {
+    cursor: pointer;
+    font-size: 6.5rem;
+  }
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .relative-element {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+
+      .player-name {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .btn {
+        border: none;
+        border-radius: 40px;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 12rem;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 500px;
+        width: 320px;
+        transition: ease-in-out 0.1s;
+
+        &.red {
+          background-color: $red;
+
+          &:hover {
+            border: 6px solid $red;
+            color: $red;
+          }
+        }
+
+        &.blue {
+          background-color: $blue;
+
+          &:hover {
+            border: 6px solid $blue;
+            color: $blue;
+          }
+        }
+
+        &:hover {
+          background-color: transparent;
+          // transform: scale(1.02);
+        }
+      }
+      .sets-count {
+        position: absolute;
+        bottom: 0;
+        line-height: 150px;
+        width: 120px;
+        border-radius: 40px;
+        font-size: 4em;
+        text-align: center;
+        cursor: default;
+
+        &.red {
+          background-color: $dark-red;
+        }
+
+        &.blue {
+          background-color: $dark-blue;
+        }
+
+        &.left {
+          right: -150px;
+        }
+
+        &.right {
+          left: -150px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .grid-item {
+    height: 50vh;
+  }
+}

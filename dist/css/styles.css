@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1f1f1f;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#swap-button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  transition: ease-in-out 0.15s;
+}
+#swap-button:hover {
+  cursor: pointer;
+  font-size: 6.5rem;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#grid-container .grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#grid-container .grid-item .relative-element {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+#grid-container .grid-item .relative-element .player-name {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+#grid-container .grid-item .relative-element .btn {
+  border: none;
+  border-radius: 40px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 12rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 500px;
+  width: 320px;
+  transition: ease-in-out 0.1s;
+}
+#grid-container .grid-item .relative-element .btn.red {
+  background-color: #e51212;
+}
+#grid-container .grid-item .relative-element .btn.red:hover {
+  border: 6px solid #e51212;
+  color: #e51212;
+}
+#grid-container .grid-item .relative-element .btn.blue {
+  background-color: #1227e5;
+}
+#grid-container .grid-item .relative-element .btn.blue:hover {
+  border: 6px solid #1227e5;
+  color: #1227e5;
+}
+#grid-container .grid-item .relative-element .btn:hover {
+  background-color: transparent;
+}
+#grid-container .grid-item .relative-element .sets-count {
+  position: absolute;
+  bottom: 0;
+  line-height: 150px;
+  width: 120px;
+  border-radius: 40px;
+  font-size: 4em;
+  text-align: center;
+  cursor: default;
+}
+#grid-container .grid-item .relative-element .sets-count.red {
+  background-color: #8f1c1c;
+}
+#grid-container .grid-item .relative-element .sets-count.blue {
+  background-color: #1c518f;
+}
+#grid-container .grid-item .relative-element .sets-count.left {
+  right: -150px;
+}
+#grid-container .grid-item .relative-element .sets-count.right {
+  left: -150px;
+}
+
+@media screen and (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .grid-item {
+    height: 50vh;
+  }
+}
