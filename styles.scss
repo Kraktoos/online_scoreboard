@@ -14,108 +14,115 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#create-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
 #game-container {
-  // display: none;
-}
+  #swap-button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    top: 47.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    transition: ease-in-out 0.15s;
 
-#swap-button {
-  color: white;
-  background-color: transparent;
-  border: none;
-  position: fixed;
-  top: 47.5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 6rem;
-  transition: ease-in-out 0.15s;
-
-  &:hover {
-    cursor: pointer;
-    font-size: 6.5rem;
+    &:hover {
+      cursor: pointer;
+      font-size: 6.5rem;
+    }
   }
-}
 
-#grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  #grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-  .grid-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-
-    .relative-element {
-      position: relative;
-      z-index: 1;
+    .grid-item {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
 
-      .player-name {
-        font-size: 3rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-        text-align: center;
-      }
+      .relative-element {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
 
-      .btn {
-        border: none;
-        border-radius: 40px;
-        color: #ffffff;
-        cursor: pointer;
-        font-size: 12rem;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 500px;
-        width: 320px;
-        transition: ease-in-out 0.1s;
+        .player-name {
+          font-size: 3rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
 
-        &.red {
-          background-color: $red;
+        .btn {
+          border: none;
+          border-radius: 40px;
+          color: #ffffff;
+          cursor: pointer;
+          font-size: 12rem;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          line-height: 500px;
+          width: 320px;
+          transition: ease-in-out 0.1s;
+
+          &.red {
+            background-color: $red;
+
+            &:hover {
+              border: 6px solid $red;
+              color: $red;
+            }
+          }
+
+          &.blue {
+            background-color: $blue;
+
+            &:hover {
+              border: 6px solid $blue;
+              color: $blue;
+            }
+          }
 
           &:hover {
-            border: 6px solid $red;
-            color: $red;
+            background-color: transparent;
+            // transform: scale(1.02);
           }
         }
+        .sets-count {
+          position: absolute;
+          bottom: 0;
+          line-height: 150px;
+          width: 120px;
+          border-radius: 40px;
+          font-size: 4em;
+          text-align: center;
+          cursor: default;
 
-        &.blue {
-          background-color: $blue;
-
-          &:hover {
-            border: 6px solid $blue;
-            color: $blue;
+          &.red {
+            background-color: $dark-red;
           }
-        }
 
-        &:hover {
-          background-color: transparent;
-          // transform: scale(1.02);
-        }
-      }
-      .sets-count {
-        position: absolute;
-        bottom: 0;
-        line-height: 150px;
-        width: 120px;
-        border-radius: 40px;
-        font-size: 4em;
-        text-align: center;
-        cursor: default;
+          &.blue {
+            background-color: $dark-blue;
+          }
 
-        &.red {
-          background-color: $dark-red;
-        }
+          &.left {
+            right: -150px;
+          }
 
-        &.blue {
-          background-color: $dark-blue;
-        }
-
-        &.left {
-          right: -150px;
-        }
-
-        &.right {
-          left: -150px;
+          &.right {
+            left: -150px;
+          }
         }
       }
     }

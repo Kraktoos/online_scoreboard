@@ -6,7 +6,16 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#swap-button {
+#create-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#game-container #swap-button {
   color: white;
   background-color: transparent;
   border: none;
@@ -17,34 +26,33 @@ body {
   font-size: 6rem;
   transition: ease-in-out 0.15s;
 }
-#swap-button:hover {
+#game-container #swap-button:hover {
   cursor: pointer;
   font-size: 6.5rem;
 }
-
-#grid-container {
+#game-container #grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-#grid-container .grid-item {
+#game-container #grid-container .grid-item {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-#grid-container .grid-item .relative-element {
+#game-container #grid-container .grid-item .relative-element {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
 }
-#grid-container .grid-item .relative-element .player-name {
+#game-container #grid-container .grid-item .relative-element .player-name {
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 1rem;
   text-align: center;
 }
-#grid-container .grid-item .relative-element .btn {
+#game-container #grid-container .grid-item .relative-element .btn {
   border: none;
   border-radius: 40px;
   color: #ffffff;
@@ -55,24 +63,24 @@ body {
   width: 320px;
   transition: ease-in-out 0.1s;
 }
-#grid-container .grid-item .relative-element .btn.red {
+#game-container #grid-container .grid-item .relative-element .btn.red {
   background-color: #e51212;
 }
-#grid-container .grid-item .relative-element .btn.red:hover {
+#game-container #grid-container .grid-item .relative-element .btn.red:hover {
   border: 6px solid #e51212;
   color: #e51212;
 }
-#grid-container .grid-item .relative-element .btn.blue {
+#game-container #grid-container .grid-item .relative-element .btn.blue {
   background-color: #1227e5;
 }
-#grid-container .grid-item .relative-element .btn.blue:hover {
+#game-container #grid-container .grid-item .relative-element .btn.blue:hover {
   border: 6px solid #1227e5;
   color: #1227e5;
 }
-#grid-container .grid-item .relative-element .btn:hover {
+#game-container #grid-container .grid-item .relative-element .btn:hover {
   background-color: transparent;
 }
-#grid-container .grid-item .relative-element .sets-count {
+#game-container #grid-container .grid-item .relative-element .sets-count {
   position: absolute;
   bottom: 0;
   line-height: 150px;
@@ -82,16 +90,16 @@ body {
   text-align: center;
   cursor: default;
 }
-#grid-container .grid-item .relative-element .sets-count.red {
+#game-container #grid-container .grid-item .relative-element .sets-count.red {
   background-color: #8f1c1c;
 }
-#grid-container .grid-item .relative-element .sets-count.blue {
+#game-container #grid-container .grid-item .relative-element .sets-count.blue {
   background-color: #1c518f;
 }
-#grid-container .grid-item .relative-element .sets-count.left {
+#game-container #grid-container .grid-item .relative-element .sets-count.left {
   right: -150px;
 }
-#grid-container .grid-item .relative-element .sets-count.right {
+#game-container #grid-container .grid-item .relative-element .sets-count.right {
   left: -150px;
 }
 
