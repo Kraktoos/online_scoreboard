@@ -139,11 +139,49 @@ body {
     #grid-container {
       .grid-item {
         .relative-element {
+          .btn {
+            line-height: 50vh;
+          }
           .sets-count {
             margin-top: 20px;
             position: static;
             line-height: 100px;
             width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 620px) {
+  #game-container {
+    #swap-button {
+      top: 50%;
+      font-size: 20vh;
+    }
+    #grid-container {
+      .grid-item {
+        height: 100vh;
+        .relative-element {
+          .player-name {
+            font-size: 8vh;
+            font-weight: 600;
+            margin: 2vh 0;
+            text-align: center;
+          }
+          .btn {
+            font-size: 28vh;
+            line-height: 58vh;
+          }
+          .sets-count {
+            line-height: 16vh;
+            font-size: 9vh;
+            margin-top: 3vh;
+
+            &.left {
+              margin-bottom: 0;
+            }
           }
         }
       }

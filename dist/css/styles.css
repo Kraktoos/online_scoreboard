@@ -109,11 +109,41 @@ body {
     top: 50%;
     font-size: 12vh;
   }
+  #game-container #grid-container .grid-item .relative-element .btn {
+    line-height: 50vh;
+  }
   #game-container #grid-container .grid-item .relative-element .sets-count {
     margin-top: 20px;
     position: static;
     line-height: 100px;
     width: 100%;
+  }
+}
+@media screen and (max-height: 620px) {
+  #game-container #swap-button {
+    top: 50%;
+    font-size: 20vh;
+  }
+  #game-container #grid-container .grid-item {
+    height: 100vh;
+  }
+  #game-container #grid-container .grid-item .relative-element .player-name {
+    font-size: 8vh;
+    font-weight: 600;
+    margin: 2vh 0;
+    text-align: center;
+  }
+  #game-container #grid-container .grid-item .relative-element .btn {
+    font-size: 28vh;
+    line-height: 58vh;
+  }
+  #game-container #grid-container .grid-item .relative-element .sets-count {
+    line-height: 16vh;
+    font-size: 9vh;
+    margin-top: 3vh;
+  }
+  #game-container #grid-container .grid-item .relative-element .sets-count.left {
+    margin-bottom: 0;
   }
 }
 @media screen and (max-width: 930px) {
